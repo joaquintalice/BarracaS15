@@ -1,0 +1,162 @@
+[
+    {
+        "id": 1234567890,
+        "name": "Ladrillo Mediano",
+        "stock": 10,
+        "currency": "UYU",
+        "cost": 19.99,
+        "description": "Ideal para construcciones sólidas y duraderas."
+    },
+    {
+        "id": 2345678901,
+        "name": "Ladrillo Pequeño",
+        "stock": 5,
+        "currency": "UYU",
+        "cost": 9.99,
+        "description": "Perfecto para proyectos de jardinería y paisajismo."
+    },
+    {
+        "id": 3456789012,
+        "name": "Pala",
+        "stock": 15,
+        "currency": "UYU",
+        "cost": 14.99,
+        "description": "Herramienta esencial para cavar y mover tierra."
+    },
+    {
+        "id": 4567890123,
+        "name": "Rastrillo",
+        "stock": 8,
+        "currency": "UYU",
+        "cost": 24.99,
+        "description": "Ideal para nivelar superficies y recoger hojas."
+    },
+    {
+        "id": 5678901234,
+        "name": "Motosierra",
+        "stock": 3,
+        "currency": "UYU",
+        "cost": 29.99,
+        "description": "Potente motosierra para tareas de corte en el jardín."
+    },
+    {
+        "id": 6789012345,
+        "name": "Portland",
+        "stock": 208,
+        "currency": "UYU",
+        "cost": 39.99,
+        "description": "Cemento de alta calidad para proyectos de construcción."
+    },
+    {
+        "id": 7890123456,
+        "name": "Pala de madera",
+        "stock": 12,
+        "currency": "UYU",
+        "cost": 49.99,
+        "description": "Pala resistente con mango de madera."
+    },
+    {
+        "id": 8901234567,
+        "name": "Pala de ladrillo",
+        "stock": 7,
+        "currency": "UYU",
+        "cost": 9.99,
+        "description": "Pala versátil para trabajos de albañilería."
+    },
+    {
+        "id": 9012345678,
+        "name": "Coca Cola",
+        "stock": 180,
+        "currency": "UYU",
+        "cost": 34.99,
+        "description": "Refresco clásico y refrescante."
+    },
+    {
+        "id": 1011121314,
+        "name": "Cementera",
+        "stock": 6,
+        "currency": "UYU",
+        "cost": 2444.99,
+        "description": "Maquinaria de construcción para mezclar cemento."
+    },
+    {
+        "id": 1112131415,
+        "name": "Ladrillo rojo",
+        "stock": 9098,
+        "currency": "UYU",
+        "cost": 14.99,
+        "description": "Ladrillo de color rojo para proyectos decorativos."
+    },
+    {
+        "id": 1213141516,
+        "name": "Ladrillo Blando",
+        "stock": 242,
+        "currency": "UYU",
+        "cost": 19.99,
+        "description": "Ladrillo suave y fácil de cortar para personalizar."
+    },
+    {
+        "id": 1314151617,
+        "name": "Tornillos",
+        "stock": 4000,
+        "currency": "UYU",
+        "cost": 9.99,
+        "description": "Conjunto de tornillos de alta calidad."
+    },
+    {
+        "id": 1415161718,
+        "name": "Tuerca",
+        "stock": 1300,
+        "currency": "UYU",
+        "cost": 9.99,
+        "description": "Tuerca resistente para proyectos de bricolaje."
+    },
+    {
+        "id": 1516171819,
+        "name": "Clavos",
+        "stock": 1100,
+        "currency": "UYU",
+        "cost": 9.99,
+        "description": "Clavos de diferentes tamaños para diversas aplicaciones."
+    },
+    {
+        "id": 1617181920,
+        "name": "Pasta de dientes",
+        "stock": 16,
+        "currency": "UYU",
+        "cost": 24.99,
+        "description": "Pasta dental para mantener una sonrisa saludable."
+    },
+    {
+        "id": 1718192021,
+        "name": "Preservativos Prime",
+        "stock": 1,
+        "currency": "UYU",
+        "cost": 49.99,
+        "description": "Preservativos de alta calidad para la intimidad."
+    },
+    {
+        "id": 1819202122,
+        "name": "Repelente de mosquitos",
+        "stock": 14,
+        "currency": "UYU",
+        "cost": 34.99,
+        "description": "Protección contra picaduras de mosquitos."
+    },
+    {
+        "id": 1920212223,
+        "name": "Camiseta de Peñarol",
+        "stock": 17,
+        "currency": "UYU",
+        "cost": 3000.99,
+        "description": "Camiseta oficial del equipo de fútbol Peñarol."
+    },
+    {
+        "id": 2021222324,
+        "name": "Guantes",
+        "stock": 10,
+        "currency": "UYU",
+        "cost": 14.99,
+        "description": "Guantes resistentes para diversas actividades."
+    }
+]

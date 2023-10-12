@@ -1,0 +1,29 @@
+.form {
+    margin-top: 100px;
+}
+
+.campo {
+    display: flex;
+    margin: 0 auto;
+    max-width: 90%;
+    width: 700px;
+    margin-top: 10px;
+}
+
+.campo label {
+    flex: 0.2;
+}
+
+.campo input {
+    flex: 1;
+}
+
+.campo input[type="submit"] {
+    all: unset;
+    cursor: pointer;
+    padding: .2rem 1rem;
+    color: #fff;
+    background-color: rgb(70, 70, 70);
+    flex: .2;
+    text-align: center;
+}
