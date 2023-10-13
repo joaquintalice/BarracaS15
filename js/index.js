@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', main);
 const URL = './products.json'
 
 async function main() {
-    const lsData = JSON.parse(localStorage.getItem('data'));
+    const lsData = JSON.parse(localStorage.getItem('dataJe'));
     if (!lsData) {
         const data = await getData()
         showData(data)
@@ -23,7 +23,6 @@ async function getData() {
 
 function showData(data) {
     const dataContainer = document.getElementById('data-container');
-    console.log(data)
     let template = ``;
 
     for (let prod of data) {
@@ -67,10 +66,10 @@ function addToCart({ name, stock, description, currency, cost, id }) {
         count: 1
     }
 
-    const localStorageData = JSON.parse(localStorage.getItem('carrito'));
+    const localStorageData = JSON.parse(localStorage.getItem('carritoJe'));
 
     if (!localStorageData) {
-        localStorage.setItem('carrito', JSON.stringify([productWithCount]));
+        localStorage.setItem('carritoJe', JSON.stringify([productWithCount]));
         return;
     }
 
@@ -80,7 +79,7 @@ function addToCart({ name, stock, description, currency, cost, id }) {
 
 
     if (!yaExisteElProducto) {
-        localStorage.setItem('carrito', JSON.stringify([...localStorageData, productWithCount]));
+        localStorage.setItem('carritoJe', JSON.stringify([...localStorageData, productWithCount]));
         return;
     }
 
@@ -93,7 +92,18 @@ function addToCart({ name, stock, description, currency, cost, id }) {
         return elem.id !== id
     });
 
-    localStorage.removeItem('carrito')
-    localStorage.setItem('carrito', JSON.stringify([...filteredArray, productoExistente]));
+    localStorage.removeItem('carritoJe')
+    localStorage.setItem('carritoJe', JSON.stringify([...filteredArray, productoExistente]));
 
+}
+
+function setLocalStorageData(data) {
+    const lsData = JSON.parse(localStorage.getItem('dataJe'));
+
+    if (!lsData) {
+        localStorage.setItem('dataJe', JSON.stringify(data));
+        return;
+    }
+
+    return;
 }

@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', main);
 const URL = './products.json'
 
 async function main() {
-    const lsData = JSON.parse(localStorage.getItem('data'));
+    const lsData = JSON.parse(localStorage.getItem('dataJe'));
     if (!lsData) {
         const data = await getData()
         showData(data)
@@ -44,20 +44,20 @@ function showData(data) {
 
 function deleteData(id) {
     console.log(id)
-    const lsData = JSON.parse(localStorage.getItem('data'));
+    const lsData = JSON.parse(localStorage.getItem('dataJe'));
     console.log(lsData)
     const filteredData = lsData.filter(prod => prod.id != id)
     console.log(filteredData)
-    localStorage.removeItem('data');
-    localStorage.setItem('data', JSON.stringify(filteredData));
+    localStorage.removeItem('dataJe');
+    localStorage.setItem('dataJe', JSON.stringify(filteredData));
     location.reload()
 }
 
 function setLocalStorageData(data) {
-    const lsData = JSON.parse(localStorage.getItem('data'));
+    const lsData = JSON.parse(localStorage.getItem('dataJe'));
 
     if (!lsData) {
-        localStorage.setItem('data', JSON.stringify(data));
+        localStorage.setItem('dataJe', JSON.stringify(data));
         return;
     }
 

@@ -32,11 +32,11 @@ function handleSubmit(e) {
         description: description
     }
     console.log(data)
-    const lsData = JSON.parse(localStorage.getItem('data'));
+    const lsData = JSON.parse(localStorage.getItem('dataJe'));
 
     if (lsData) {
-        localStorage.removeItem('data');
-        localStorage.setItem('data', JSON.stringify([...lsData, data]));
+        localStorage.removeItem('dataJe');
+        localStorage.setItem('dataJe', JSON.stringify([...lsData, data]));
         alert('producto agregado al stock con éxito')
         location.href = 'index.html'
     }

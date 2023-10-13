@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const buyBtn = document.getElementById('buy-btn')
     buyBtn.addEventListener('click', () => {
         alert('productos comprados con éxito je')
-        localStorage.removeItem('carrito')
+        localStorage.removeItem('carritoJe')
         location.reload()
     })
     getLocalStorageData()
@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 function getLocalStorageData() {
-    const lsData = JSON.parse(localStorage.getItem('carrito'));
+    const lsData = JSON.parse(localStorage.getItem('carritoJe'));
     if (lsData) {
         showCartData(lsData)
     }
@@ -23,7 +23,7 @@ function showCartData(cartDataArray) {
     const alert = document.getElementById('alerta');
 
     if (cartDataArray.length == 0) {
-        localStorage.removeItem('carrito')
+        localStorage.removeItem('carritoJe')
         location.reload()
     }
     if (!cartDataArray) {
@@ -78,9 +78,9 @@ function showCartData(cartDataArray) {
 
 
 function deleteData(id) {
-    const lsData = JSON.parse(localStorage.getItem('carrito'));
+    const lsData = JSON.parse(localStorage.getItem('carritoJe'));
     const filteredData = lsData.filter(prod => prod.id != id)
-    localStorage.removeItem('carrito');
-    localStorage.setItem('carrito', JSON.stringify(filteredData));
+    localStorage.removeItem('carritoJe');
+    localStorage.setItem('carritoJe', JSON.stringify(filteredData));
     location.reload()
 }
