@@ -1,13 +1,69 @@
+// import { jsPDF } from "jspdf";
+
 document.addEventListener("DOMContentLoaded", () => {
     const buyBtn = document.getElementById('buy-btn')
     buyBtn.addEventListener('click', () => {
         alert('productos comprados con éxito je')
+        generateBill();
         localStorage.removeItem('carritoJe')
         location.reload()
     })
     getLocalStorageData()
 
 })
+
+
+function generateBill() {
+    const lsData = JSON.parse(localStorage.getItem('carritoJe'));
+
+    // Crear un nuevo documento jsPDF en modo retrato
+    const doc = new jsPDF();
+
+    // Configurar el encabezado del ticket
+    doc.setFontSize(16);
+    doc.text("Mi Tienda", 70, 10);
+    doc.setFontSize(12);
+    doc.text("Dirección de la tienda", 70, 20);
+    doc.text("Teléfono: 123-456-7890", 70, 30);
+    doc.text("Fecha: " + new Date().toLocaleString(), 10, 50);
+
+    // Configurar la tabla de productos
+    doc.setFontSize(14);
+    doc.text("Producto", 10, 70);
+    doc.text("Precio por unidad", 90, 70);
+    doc.text("Cantidad", 150, 70);
+    doc.text("Subtotal", 190, 70);
+
+    let y = 80; // Posición inicial de la tabla
+
+    let total = 0;
+
+    // Iterar a través de los productos en el carrito
+    lsData.forEach((product) => {
+        const { name, cost, count } = product;
+        const subtotal = cost * count;
+        total += subtotal;
+
+        doc.setFontSize(12);
+        doc.text(name, 10, y);
+        doc.text('$' + cost.toFixed(2), 90, y);
+        doc.text(count.toString(), 150, y);
+        doc.text('$' + subtotal.toFixed(2), 190, y);
+
+        y += 10;
+    });
+
+    // Agregar el total al final
+    doc.setFontSize(14);
+    doc.text("Total:", 160, y + 10);
+    doc.text('$' + total.toFixed(2), 180, y + 10);
+
+    // Guardar el documento como "Ticket.pdf"
+    doc.save('Ticket.pdf');
+}
+
+
+
 
 function getLocalStorageData() {
     const lsData = JSON.parse(localStorage.getItem('carritoJe'));
