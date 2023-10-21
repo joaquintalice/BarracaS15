@@ -21,9 +21,9 @@ function generateBill() {
 
     // Configurar el encabezado del ticket
     doc.setFontSize(16);
-    doc.text("Mi Tienda", 70, 10);
+    doc.text("Barraca Ladrillos SRL", 70, 10);
     doc.setFontSize(12);
-    doc.text("Dirección de la tienda", 70, 20);
+    doc.text("Dirección: Groenlandia", 70, 20);
     doc.text("Teléfono: 123-456-7890", 70, 30);
     doc.text("Fecha: " + new Date().toLocaleString(), 10, 50);
 
@@ -58,9 +58,21 @@ function generateBill() {
     doc.text("Total:", 160, y + 10);
     doc.text('$' + total.toFixed(2), 180, y + 10);
 
-    // Guardar el documento como "Ticket.pdf"
-    doc.save('Ticket.pdf');
+    // Generar el contenido del PDF en formato blob
+    const pdfBlob = doc.output('blob');
+
+    // Crear una URL de objeto para el blob del PDF
+    const pdfURL = URL.createObjectURL(pdfBlob);
+
+    // Abrir el PDF en una nueva ventana o pestaña
+    window.open(pdfURL);
+
+    // No es necesario guardar el documento como archivo físico en este caso
+
+    // Finalmente, limpiar la URL de objeto cuando no sea necesario
+    URL.revokeObjectURL(pdfURL);
 }
+
 
 
 
